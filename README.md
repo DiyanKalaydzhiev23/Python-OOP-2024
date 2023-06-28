@@ -5,3 +5,7 @@
 [Classes and Objects](https://forms.gle/CHnhu8RFbBoZANtSA)
 
 ---
+
+[Inheritance](https://forms.gle/ZnbTjGyrf7mLB5qk8)
+
+---
