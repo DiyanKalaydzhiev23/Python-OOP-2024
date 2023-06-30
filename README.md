@@ -9,3 +9,7 @@
 [Inheritance](https://forms.gle/ZnbTjGyrf7mLB5qk8)
 
 ---
+
+[Encapsulation](https://forms.gle/1rM78NF1Tzh75WFy7)
+
+---
