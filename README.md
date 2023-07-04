@@ -13,3 +13,7 @@
 [Encapsulation](https://forms.gle/1rM78NF1Tzh75WFy7)
 
 ---
+
+[Static and Class Methods](https://forms.gle/pJeuh4L6hn5dfv4m7)
+
+---
