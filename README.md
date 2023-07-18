@@ -27,3 +27,9 @@
 ---
 
 [Iterators and Generators](https://forms.gle/ZKtq4aBSEiddug2T9)
+
+---
+
+[Decorators](https://forms.gle/wUte1HMW37HV1g9V9)
+
+---
