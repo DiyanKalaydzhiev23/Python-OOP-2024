@@ -1,0 +1,6 @@
+Function add was called. Result: 4
+Function mult was called. Result: 24
+Function add was called. Result: 4. With param: 2
+Function mult was called. Result: 24. With param: 3
+Function add was called. Result: 4. With param: 2
+Function mult was called. Result: 24. With param: 3
