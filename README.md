@@ -2,6 +2,8 @@
 
 - [First Steps In OOP](https://forms.gle/jenahYVLxPK8PYhN6)
 
+- [Classes and Objects](https://forms.gle/PeoSqmdHyCJbptxP8)
+
 ---
 
 # Plans
