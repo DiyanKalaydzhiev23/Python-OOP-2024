@@ -4,6 +4,8 @@
 
 - [Classes and Objects](https://forms.gle/PeoSqmdHyCJbptxP8)
 
+- [Inheritance](https://forms.gle/jzjTh2sLYGRNQak6A)
+
 ---
 
 # Plans
@@ -62,3 +64,38 @@
    - **__doc__** - връща документацията на обекта 
 
 ---
+
+### 03. Inheritance
+
+1. Какво е наследяване?
+   - Наследяването е един от четирите основни стълба на обектно ориентираното програмиране
+   - Използваме го, за по-добра абстракция и преизползване на код
+   - DRY - **Don't Repeat Yourself**
+
+2. super()
+   - **super** представлява първия бащин клас
+  
+3. Видове наследяване
+   - Single
+     </br>
+     <img src="https://simplesnippets.tech/wp-content/uploads/2018/03/single_inheritance_in_cpp.png" width=400 height=200 />
+   - Multiple
+     </br>
+     <img src="https://media.geeksforgeeks.org/wp-content/uploads/20191222084630/multipleinh.png" width=400 height=200 >
+   - Multilevel
+     </br>
+     <img src="https://media.geeksforgeeks.org/wp-content/uploads/multilevel-inheritance.png" width=400 height=200 >
+   - Hierarchical
+     </br>
+     <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Hierarchical_Inheritance_In_C_P_P_Chart.png" width=400 height=200>
+
+4. What is MRO (Method Resolution Order)
+   - Depth First Resolve
+   - Подрежда наследяваните класове в определен ред.
+
+5. Mixins
+   - Миксините са класове, които използваме, за да наследим някаква функционалност в множество класове.
+   - Пример:
+     - Имаме клас кола и клас фурна
+     - Колата и фурната имат часовник, които работи както всички други часовници по света
+     - Съответно правим миксин клас часовник, който да наследим в другите 2 класа.
