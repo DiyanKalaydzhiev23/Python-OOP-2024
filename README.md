@@ -8,6 +8,8 @@
 
 - [Encapsulation](https://forms.gle/rRjWfFMJgFeDLLmw6)
 
+- [Static And Class Methods](https://forms.gle/eTrbAFr3SA2ohh3q8)
+
 ---
 
 # Plans
@@ -140,4 +142,34 @@
 
       self.name = value
    ```
+
+   ---
+
+   ### 05. Static and Class Methods
+
+   1. Static Methods
+      - Методи, които не използват инстанцията, съответно не я получават като параметър
+      - Не знаят нищо за класа и не могат да променят неговия стейт
+      - Използваме ги за неща, които бихме написали като функции извън класа
+      - Единствената причина да са в класа е, защото по някакъв начин са обвързани с неговата логика или се ползват там
+      - Създаваме ги с декоратора **@staticmethod**
+
+      ```py
+      @staticmethod
+      def is_adult(age):
+         return age >= 18
+      ```
+
+   2. Class Methods
+      - Закачени са към самия клас, а не към инстанциите(подобно на class data attributes)
+      - Вместо инстанцията, като първи параметър получават класа като обект
+      - Създаваме ги с декоратора **@classmethod**
+
+      ```py
+      @classmethod
+      def create_new_instance(cls, *args):
+         return cls(*args)
+      ```
+      
+   ---
    
