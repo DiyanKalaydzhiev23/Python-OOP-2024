@@ -35,3 +35,4 @@ class Guild:
         players_info = '\n'.join(p.player_info() for p in self.players)
         return f"Guild: {self.name}\n" \
                f"{players_info}"
+
