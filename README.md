@@ -10,6 +10,8 @@
 
 - [Static And Class Methods](https://forms.gle/eTrbAFr3SA2ohh3q8)
 
+- [Polymorphism and Asbtraction](https://forms.gle/9ArSM52FqWugHm7V8)
+
 ---
 
 # Plans
@@ -172,4 +174,53 @@
    ```
       
    ---
+
+### 06. Polymorphism and Abstraction
+
+1. Полиморфизъм
+   - Poly(много) - morphism(форми)
+   - Пример в програмирането, когато два производни класа имат един и същи метод реализиран по различен начин
+   ```py
+   class Eagle(Bird):
+      def fly(self):
+         print("I fly only forward")
+
+   class Hummingbird(Bird):
+      def fly(self):
+         print("I fly in all directions")
+   ```
+
+2. Method Overloading
+   - Когато променяме поведението на методи и оператори използвайки магически методи
+   - __len__
+   - __add__
+   - __mul__
+   - __truediv__
+   - __floordiv__
+   - __pow__
+   - __eq__
+   - __ne__
+   - and so on...
+  
+3. Duck Typing
+   - Когато не се интересуваме от типа на обекта, а от това дали той има методите, които искаме
+
+4. Abstraction
+   - Да кажем какво прави нещо, без да казваме как го прави
+   - В ООП това често се отнася към това да изнесем оща логика в бащини или mixin класове
+
+5. Абстрактни класове
+   - Класове, които не се инстанцират и служат като шаблон за наследяващите ги класове
+   ```py
+   from abc import ABC, abstractmethod
+
+   class Shape(ABC):
    
+      @abstractmethod  # задължава наследяващите класове да имплементират този метод 
+      def area(self):
+         pass
+
+      @abstractmethod  # задължава наследяващите класове да имплементират този метод 
+      def perimeter(self):
+         pass
+   ```
