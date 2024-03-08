@@ -224,3 +224,98 @@
       def perimeter(self):
          pass
    ```
+
+---
+
+### 07. SOLID
+
+**S** - Single Responsibility
+**O** - Open/Closed
+**L** - Liskov Substitution
+**I** - Interface Segregation
+**D** - Dependency Inversion
+
+1. Single Responsibility
+   - Всеки метод/функция трябва да прави точно едно нещо
+
+2. Open Closed
+   - Трябва така да пишем кода си, че той да бъде заторен за модифициране, но отворен за разширение
+   - Тоест, когато имаме нова логика, да не трябва да променяме старата, а просто да я добавим
+
+3. Liskov Substitution
+   - "Децата трябва да бъдат подходящи за родителите"
+   ```py
+   from abc import ABC, abstractmethod
+
+
+   class Notification(ABC):
+       @abstractmethod
+       def notify(self, message, email):
+           pass
+   
+   class Email(Notification):
+       def notify(self, message, email):
+           print(f'Send {message} to {email}')
+   
+   class SMS(Notification):
+       def notify(self, message, phone):  # notify метода получава параметър телефон, вместо имейл, което прави класа неподходящ наследник
+           print(f'Send {message} to {phone}')
+   ```
+
+   Решението:
+
+   ```py
+   
+   class Notification(ABC):
+       @abstractmethod
+       def notify(self, message):
+           pass
+
+   class Email(Notification):
+       def __init__(self, email):
+           self.email = email
+   
+       def notify(self, message):
+           print(f'Send "{message}" to {self.email}')
+   
+   
+   class SMS(Notification):
+       def __init__(self, phone):
+           self.phone = phone
+   
+       def notify(self, message):
+           print(f'Send "{message}" to {self.phone}')
+   ```
+
+4. Interface segregation
+   - Не трябва да задължаваме класовете ни да имплементират методи, които не ползваме
+
+5. Dependency Inversion
+   - Разчитаме на абстракция, а не на конкретна имплементация
+
+   ```py
+      from abc import ABC, abstractmethod
+   
+      class LoggerInterface(ABC):
+          @abstractmethod
+          def log(self, message):
+              pass
+      
+      class Logger(LoggerInterface):  # Наследяваме Абстрактния клас, за да можем да разчитаме на абстракцията да ни задължи да имплементираме нужните методи
+          def log(self, message):
+              with open('log.txt', 'a') as f:
+                  f.write(message + '\n')
+      
+      class Calculator:
+          def __init__(self, logger: LoggerInterface):
+              self.logger = logger
+      
+          def add(self, x, y):
+              result = x + y
+              self.logger.log(f"Added {x} and {y}, result = {result}")
+              return result
+   ```
+
+6. Dependency Injecetion
+   - Когато подадем на метод инсанция на обект от друг клас, за да може тя да свърши нужната работа
+---
