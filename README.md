@@ -10,7 +10,7 @@
 
 - [Static And Class Methods](https://forms.gle/eTrbAFr3SA2ohh3q8)
 
-- [Polymorphism and Asbtraction](https://forms.gle/9ArSM52FqWugHm7V8)
+- [Polymorphism and Abstraction](https://forms.gle/9ArSM52FqWugHm7V8)
 
 ---
 
