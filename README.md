@@ -12,6 +12,8 @@
 
 - [Polymorphism and Abstraction](https://forms.gle/9ArSM52FqWugHm7V8)
 
+- [SOLID](https://forms.gle/AhW2e1hJnySE45KL9)
+
 ---
 
 # Plans
