@@ -1,5 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
+
 class IEmail(object):
     __metaclass__ = ABCMeta
 
