@@ -318,6 +318,6 @@
               return result
    ```
 
-6. Dependency Injecetion
+6. Dependency Injection
    - Когато подадем на метод инсанция на обект от друг клас, за да може тя да свърши нужната работа
 ---
