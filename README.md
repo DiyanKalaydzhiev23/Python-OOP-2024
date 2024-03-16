@@ -341,5 +341,61 @@
    (x ** 2 for x in range(10)
    ```
 
+---
 
+### 09. Decorators
+
+1. Какво е декоратор
+   - Функция, която обгражда друга функция и я получава като параметър
+   ```py
+   def print_result_in_brackets(func):  # Тази функция приема функцията под нея като параметъ и я заменя с wrapper фунцкията ни
+      def wrapper(*args, **kwargs):
+         result = func(*args, **kwargs)
+         print(f"({result})")  # връщаме резултата обграден от скоби
+
+      return wrapper
+
+   # Usage
+   @print_result_in_brackets
+   def get_hi():
+      return "Hi"
+
+   get_hi()  # (Hi)
+   ```
+
+2. Декоратор с параметър
+   ```py
+      def print_result_in_brackets(brackets)  # Tази фунцкия приема аргументите на декоратора
+         def decorator(func):  # Тази функция приема функцията под нея като параметъ и я заменя с wrapper фунцкията ни
+            def wrapper(*args, **kwargs):
+               result = func(*args, **kwargs)
+               print(f"{brackets[0]}{result}{brackets[1]}")  # връщаме резултата обграден от скоби
    
+         return wrapper
+      return decorator
+
+      @print_result_in_brackets("[]")
+      def get_hi():
+         return "Hi"
+   
+      get_hi()  # [Hi]
+   ```
+
+3. Class decorator
+   ```py
+   class func_logger:
+      _logfile = 'out.log'
+
+      def __init__(self, func):
+         self.func = func
+
+      def __call__(self, *args):
+         log_string = self.func.__name__ + " was called"
+
+         with open(self._logfile, 'a') as opened_file:
+            opened_file.write(log_string + '\n')
+
+         return self.func(*args)
+   ```
+   
+---
