@@ -16,6 +16,8 @@
 
 - [Iterators And Generators](https://forms.gle/c2GM6FsSRhAc3eyB8)
 
+- [Decorators](https://forms.gle/5WEUAUmfKneqv8th7)
+
 ---
 
 # Plans
