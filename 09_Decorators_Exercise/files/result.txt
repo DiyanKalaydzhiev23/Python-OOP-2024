@@ -1,0 +1,2 @@
+Function sum_numbers was called. Result: 14
+Function sum_numbers was called. Result: 15
