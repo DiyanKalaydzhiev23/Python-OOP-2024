@@ -43,7 +43,7 @@ class TestStudent(TestCase):
         )
 
         self.assertEqual(
-            {"math": ["x + y = z"]},
+            {"math": ["x + y = z"]}th,
             self.student.courses
         )
 
